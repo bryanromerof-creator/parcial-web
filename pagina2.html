@@ -2,15 +2,62 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Página 2 - Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas & Escape Room | Tymon's Family Diner</title>
+    <style>
+        body {
+            background-color: #0b090e;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+        header {
+            background: linear-gradient(135deg, #1a0b12 0%, #3d0814 100%);
+            border-bottom: 3px solid #ffb703;
+            padding: 25px;
+        }
+        h1 { color: #ffb703; text-transform: uppercase; }
+        .box {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #16131d;
+            border: 2px solid #e6192e;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 0 25px rgba(230, 25, 46, 0.3);
+        }
+        p { color: #ccc; font-size: 1.1rem; margin-bottom: 30px; }
+        nav a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background-color: #ffb703;
+            color: #0b090e;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: #e6192e;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <h1>Página 2: Soporte y Contacto</h1>
-    <p>Has saltado exitosamente a la segunda página del proyecto.</p>
+    <header>
+        <h1>🔐 Zona de Reservas - Tymon's Escape Room</h1>
+    </header>
 
-    <nav>
-        <a href="index.html">Enlace 1: Volver a la Página Principal</a> |
-        <a href="https://google.com" target="_blank">Enlace 2: Ir a buscador externo</a>
-    </nav>
+    <div class="box">
+        <h2>¡Bienvenido al Panel de Control de Tymon!</h2>
+        <p>Aquí puedes gestionar tus entradas para las salas de escape, cumpleaños y funciones privadas con nuestros animatrónicos.</p>
+        
+        <nav>
+            <a href="index.html">⬅️ Volver al Menú Principal (Inicio)</a>
+            <a href="#horarios" onclick="alert('Horarios disponibles: Viernes a Domingo de 6:00 PM a 12:00 AM')">🕒 Consultar Horarios Nocturnos</a>
+        </nav>
+    </div>
 </body>
 </html>
