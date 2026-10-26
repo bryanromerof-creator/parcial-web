@@ -2,34 +2,189 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tienda E-Commerce - Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tymon's Family Diner | Pizzería & Escape Room</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b090e;
+            color: #f1f1f1;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #1a0b12 0%, #3d0814 100%);
+            border-bottom: 3px solid #ffb703;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(230, 25, 46, 0.4);
+        }
+        header h1 {
+            color: #ffb703;
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 12px rgba(255, 183, 3, 0.6);
+        }
+        header p {
+            color: #ff4d6d;
+            font-weight: bold;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+        /* REQUISITO 1: 2 ENLACES / SALTOS ENTRE PÁGINAS */
+        nav {
+            background-color: #16121e;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #2b2338;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            background-color: #e6192e;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #ffb703;
+            color: #0b090e;
+            box-shadow: 0 0 15px #ffb703;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #ffb703;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        /* TARJETAS PARA LAS 3 IMÁGENES Y 3 BOTONES */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background-color: #16131d;
+            border: 1px solid #2f2740;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding-bottom: 25px;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(230, 25, 46, 0.35);
+            border-color: #e6192e;
+        }
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 3px solid #e6192e;
+        }
+        .card h3 {
+            color: #ffb703;
+            margin: 18px 0 10px;
+            font-size: 1.3rem;
+        }
+        .card p {
+            color: #b8b2c4;
+            padding: 0 18px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        /* REQUISITO 3: 3 BOTONES ESTILIZADOS */
+        .btn {
+            background: linear-gradient(90deg, #e6192e, #b51222);
+            color: #fff;
+            border: 2px solid #ffb703;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn:hover {
+            background: #ffb703;
+            color: #0b090e;
+            box-shadow: 0 0 15px rgba(255, 183, 3, 0.8);
+        }
+        footer {
+            margin-top: 60px;
+            background-color: #120e17;
+            border-top: 2px solid #2b2338;
+            text-align: center;
+            padding: 25px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    <h1>Página Principal - E-Commerce</h1>
 
-    <!-- REQUISITO 1: 2 Enlaces o saltos entre páginas -->
+    <header>
+        <h1>🦁 Tymon's Family Diner</h1>
+        <p>Pizzería Artesanal • Show Animatrónico • Escape Room</p>
+    </header>
+
+    <!-- REQUISITO 1: 2 ENLACES O SALTOS ENTRE PÁGINAS -->
     <nav>
-        <a href="pagina2.html">Enlace 1: Ir a la Página 2 (Contacto)</a> | 
-        <a href="#final">Enlace 2: Salto a la parte inferior</a>
+        <a href="pagina2.html">🚪 Ir a Reservas & Escape Room (Página 2)</a>
+        <a href="#zona-atracciones">🍕 Saltar a Atracciones y Menú</a>
     </nav>
-    <hr>
 
-    <!-- REQUISITO 2: 3 Imágenes (Links reales que cargan solos) -->
-    <h2>Galería de Productos (3 Imágenes)</h2>
-    <img src="https://picsum.photos/200/200?random=1" alt="Imagen 1">
-    <img src="https://picsum.photos/200/200?random=2" alt="Imagen 2">
-    <img src="https://picsum.photos/200/200?random=3" alt="Imagen 3">
-    <hr>
+    <main class="container" id="zona-atracciones">
+        <h2 class="section-title">Nuestras Experiencias Principales</h2>
 
-    <!-- REQUISITO 3: 3 Botones -->
-    <h2>Acciones (3 Botones)</h2>
-    <button onclick="alert('Producto agregado')">Botón 1: Agregar al Carrito</button>
-    <button onclick="alert('Mostrando detalles')">Botón 2: Ver Detalles</button>
-    <button onclick="alert('Compra realizada')">Botón 3: Comprar Ahora</button>
+        <!-- REQUISITO 2 Y 3: 3 IMÁGENES Y 3 BOTONES -->
+        <div class="grid">
+            
+            <!-- Tarjeta 1: Pizzería -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Pizza Especial de Tymon">
+                <h3>Pizza Suprema de Tymon</h3>
+                <p>Masa artesanal horneada a la piedra con doble pepperoni, queso fundido y la receta secreta de la casa.</p>
+                <button class="btn" onclick="alert('🍕 ¡Pizza Suprema agregada a tu orden en Tymon\'s Family Diner!')">Ordenar Pizza</button>
+            </div>
 
-    <hr>
+            <!-- Tarjeta 2: El León Tymon (Show Animatrónico) -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80" alt="Show Animatrónico de Tymon el León">
+                <h3>El Escenario de Tymon</h3>
+                <p>Disfruta del espectáculo musical en vivo de nuestro protagonista, el león animatrónico Tymon y su banda.</p>
+                <button class="btn" onclick="alert('🦁 ¡Mesa reservada frente al escenario principal de Tymon!')">Reservar Show</button>
+            </div>
+
+            <!-- Tarjeta 3: Escape Room -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Escape Room Nocturno">
+                <h3>Escape Room: Turno de Noche</h3>
+                <p>¿Puedes resolver los acertijos mecánicos y escapar de la pizzería antes de que den las 6:00 AM?</p>
+                <button class="btn" onclick="alert('🔐 ¡Reto aceptado! Tu código de acceso al Escape Room ha sido generado.')">Entrar al Escape Room</button>
+            </div>
+
+        </div>
+    </main>
+
     <footer id="final">
-        <p>Fin de la página principal.</p>
+        <p>© 2026 Tymon's Family Diner - Todos los derechos reservados | Bogotá, Colombia</p>
     </footer>
+
 </body>
 </html>
